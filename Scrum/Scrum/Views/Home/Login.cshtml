@@ -2,33 +2,52 @@
     ViewBag.Title = "Login";
 }
     <html>
+    
 
     <head>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
 
-            body {font-family: Arial, Helvetica, sans-serif;}
-            form {border: 3px solid #f1f1f1;}
+
+            body h1, h2, h3, h4, h5, b, p, footer, title, a, text 
+            {font-family: Poppins; /*Arial, Helvetica, sans-serif;*/
+
+            }
+            body{
+                background-color:none;
+            }
+
+            form {
+                padding: 200px;
+            }
+
 
 
             input[type=text], input[type=password] {
               width: 100%;
               padding: 12px 20px;
               margin: 8px 0;
-              display: inline-block;
+              display:table;
               border: 1px solid #ccc;
               box-sizing: border-box;
+              background-color:white;
+              
             }
 
 
             button {
-              background-color: #4CAF50;
-              color: white;
-              padding: 14px 20px;
+              background-color: dodgerblue;
+              color:white;
+              padding: 12px 20px;
               margin: 8px 0;
               border: none;
               cursor: pointer;
-              width: 100%;
+              width: 15%;
             }
 
 
@@ -38,7 +57,7 @@
 
 
             .cancelbtn {
-              width: auto;
+              width: 15%;
               padding: 10px 18px;
               background-color: #f44336;
             }
@@ -57,18 +76,18 @@
 
 
             .container {
-              padding: 16px;
+              padding: 6px;
             }
 
 
             span.psw {
-              float: right;
-              padding-top: 16px;
+              float: none;
+              padding-top: 15px;
             }
 
 
             /* Change styles for span and cancel button on extra small screens */
-            @*@media screen and (max-width: 300px)**@ 
+            @*@media screen and (max-width: 300px)**@
             /*{
               span.psw {
                  display: block;
@@ -81,15 +100,12 @@
         </style>
     </head>
     <body>
+        
 
-
-        <h4>Login Form</h4>
 
 
         <form action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <img src="img_avatar2.png" alt="Avatar" class="avatar">
-            </div>
+
 
 
             <div class="container">
@@ -107,7 +123,7 @@
             </div>
 
 
-            <div class="container" style="background-color:#f1f1f1">
+            <div class="container"background-color:#f1f1f1">
                 <button type="button" class="cancelbtn">Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
