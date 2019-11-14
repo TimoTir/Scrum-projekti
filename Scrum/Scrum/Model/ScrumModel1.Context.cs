@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Scrum
+namespace Scrum.Model
 {
     using System;
     using System.Data.Entity;

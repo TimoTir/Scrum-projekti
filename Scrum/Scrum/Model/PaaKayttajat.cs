@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Scrum
+namespace Scrum.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class KurssiToteutukset
+    public partial class PaaKayttajat
     {
-        public string Kurssi { get; set; }
-        public Nullable<System.DateTime> Paivamaara { get; set; }
-        public Nullable<int> Opettaja { get; set; }
-        public Nullable<int> Luokka { get; set; }
-        public Nullable<int> KurssiId { get; set; }
+        public int HenkiloID { get; set; }
+        public string Etunimi { get; set; }
+        public string Sukunimi { get; set; }
+        public string Puhelin { get; set; }
+        public string Sahkoposti { get; set; }
+        public Nullable<int> LoginId { get; set; }
     
-        public virtual Kurssit Kurssit { get; set; }
-        public virtual Luokkatilat Luokkatilat { get; set; }
+        public virtual Logins Logins { get; set; }
     }
 }

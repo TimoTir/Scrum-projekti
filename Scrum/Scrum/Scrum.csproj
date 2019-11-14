@@ -132,42 +132,42 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Kurssit.cs">
+    <Compile Include="Model\Kurssit.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="KurssiToteutukset.cs">
+    <Compile Include="Model\KurssiToteutukset.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Logins.cs">
+    <Compile Include="Model\Logins.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Luokkatilat.cs">
+    <Compile Include="Model\Luokkatilat.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Opettajat.cs">
+    <Compile Include="Model\Opettajat.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Opiskelijat.cs">
+    <Compile Include="Model\Opiskelijat.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Osallistumiset.cs">
+    <Compile Include="Model\Osallistumiset.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="PaaKayttajat.cs">
+    <Compile Include="Model\PaaKayttajat.cs">
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScrumModel1.Context.cs">
+    <Compile Include="Model\ScrumModel1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScrumModel1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ScrumModel1.cs">
+    <Compile Include="Model\ScrumModel1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScrumModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ScrumModel1.Designer.cs">
+    <Compile Include="Model\ScrumModel1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScrumModel1.edmx</DependentUpon>
@@ -195,12 +195,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="ScrumModel1.Context.tt">
+    <Content Include="Model\ScrumModel1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ScrumModel1.edmx</DependentUpon>
       <LastGenOutput>ScrumModel1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ScrumModel1.tt">
+    <Content Include="Model\ScrumModel1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ScrumModel1.edmx</DependentUpon>
       <LastGenOutput>ScrumModel1.cs</LastGenOutput>
@@ -219,11 +219,11 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Koulujutut.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <EntityDeploy Include="ScrumModel1.edmx">
+    <EntityDeploy Include="Model\ScrumModel1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ScrumModel1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="ScrumModel1.edmx.diagram">
+    <Content Include="Model\ScrumModel1.edmx.diagram">
       <DependentUpon>ScrumModel1.edmx</DependentUpon>
     </Content>
   </ItemGroup>

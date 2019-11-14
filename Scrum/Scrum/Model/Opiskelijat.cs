@@ -7,14 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Scrum
+namespace Scrum.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Opettajat
+    public partial class Opiskelijat
     {
-        public int HenkiloID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Opiskelijat()
+        {
+            this.Osallistumiset = new HashSet<Osallistumiset>();
+        }
+    
+        public int Opiskelijanumero { get; set; }
         public string Etunimi { get; set; }
         public string Sukunimi { get; set; }
         public string Puhelin { get; set; }
@@ -22,5 +28,7 @@ namespace Scrum
         public Nullable<int> LoginId { get; set; }
     
         public virtual Logins Logins { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Osallistumiset> Osallistumiset { get; set; }
     }
 }
