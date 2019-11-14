@@ -13,16 +13,15 @@ namespace Scrum.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Login()
         {
             ViewBag.Message = "Titityyy.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Koulujutut()
         {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }

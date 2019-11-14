@@ -1,25 +1,42 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
 
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
+            body h1, h2, h3, h4, h5, b, p, footer, title, a, text {
+                font-family: Poppins; /*Arial, Helvetica, sans-serif;*/
+            }
+            .container {
+              padding: 6px;
+            }
+
+        </style>
+
+        <body>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Osallistumis päiväkirja", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                            <li>@Html.ActionLink("Koulujutut", "Koulujutut", "Home")</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-</body>
+        </body>
+
+
