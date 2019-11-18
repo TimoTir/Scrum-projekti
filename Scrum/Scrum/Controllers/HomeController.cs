@@ -15,14 +15,14 @@ namespace Scrum.Controllers
         {
             var secret = ConfigurationManager.AppSettings["Secret"];
             ViewBag.Secret = secret;
-            //return View();
-        
-            if (Session["UserName"] == null)
-            {
-                ViewBag.LoggedStatus = "Out";
-            }
-            else ViewBag.LoggedStatus = "In";
             return View();
+        
+            //if (Session["UserName"] == null)
+            //{
+            //    ViewBag.LoggedStatus = "Out";
+            //}
+            //else ViewBag.LoggedStatus = "In";
+            //return View();
         } 
 
         public ActionResult Login()
