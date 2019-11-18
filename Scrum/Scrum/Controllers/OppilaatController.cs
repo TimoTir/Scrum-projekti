@@ -9,11 +9,12 @@ namespace Scrum.Controllers
 {
     public class OppilaatController : Controller
     {
+        ScrumEntities1 db = new ScrumEntities1();
         // GET: Oppilaat
         public ActionResult Index()
         {
-            ScrumEntities1 db = new ScrumEntities1();
-            return View();
+            List<Opiskelijat> model = db.Opiskelijat.ToList();
+            return View(model);
         }
     }
 }
