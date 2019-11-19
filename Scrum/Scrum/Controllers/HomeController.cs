@@ -17,7 +17,7 @@ namespace Scrum.Controllers
             ViewBag.Secret = secret;
             return View();
 
-
+        }
 
             public ActionResult Login()
             {
@@ -33,4 +33,3 @@ namespace Scrum.Controllers
             }
         }
     }
-}
