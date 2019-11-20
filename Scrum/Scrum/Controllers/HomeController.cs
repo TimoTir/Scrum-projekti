@@ -29,7 +29,7 @@ namespace Scrum.Controllers
             foreach (var s in a)
             {
 
-                x += s.HenkiloID.ToString();
+                x += s.Etunimi.ToString();
 
             }
             ViewBag.Message = x;
