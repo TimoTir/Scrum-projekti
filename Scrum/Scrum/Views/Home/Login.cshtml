@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+    <html>
+    
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+
+
+            body h1, h2, h3, h4, h5, b, p, footer, title, a, text 
+            {font-family: Poppins; /*Arial, Helvetica, sans-serif;*/
+
+            }
+            body {
+                background-image: url('../../Images/shcool1.jpg');
+            }
+
+            form {
+                padding: 200px;
+            }
+
+
+
+            input[type=text], input[type=password] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 10px 0;
+              display:table;
+              border: 1px solid #ccc;
+              box-sizing: border-box;
+              background-color:white;
+              
+            }
+
+
+            button {
+              background-color: dodgerblue;
+              color:white;
+              padding: 12px 20px;
+              margin: 8px 0;
+              border: none;
+              cursor: pointer;
+              width: 15%;
+            }
+
+
+            button:hover {
+              opacity: 0.8;
+            }
+
+
+            .cancelbtn {
+              width: 15%;
+              padding: 10px 18px;
+              background-color: #f44336;
+            }
+
+
+            .imgcontainer {
+              text-align: center;
+              margin: 24px 0 12px 0;
+            }
+
+
+            img.avatar {
+              width: 40%;
+              border-radius: 50%;
+            }
+
+
+            .container {
+              padding: 6px;
+            }
+
+
+            span.psw {
+              float: none;
+              padding-top: 15px;
+            }
+
+
+            /* Change styles for span and cancel button on extra small screens */
+            @*@media screen and (max-width: 300px)**@
+            /*{
+              span.psw {
+                 display: block;
+                 float: none;
+              }
+              .cancelbtn {
+                 width: 100%;
+              }
+            }*/
+        </style>
+    </head>
+    <body>
+        
+
+
+
+        <form action="/action_page.php" method="post">
+
+
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+
+            <div class="container"background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+
+
+    </body>
+
+    </html>
+
+
+@*<form action="action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>*@
