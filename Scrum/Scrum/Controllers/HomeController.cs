@@ -19,7 +19,28 @@ namespace Scrum.Controllers
 
         }
 
-            public ActionResult Login()
+        public ActionResult Hae()
+        {
+            var x = "";
+
+            ScrumEntities1 db = new ScrumEntities1();
+            var a = from b in db.Opettajat
+                    select b;
+            foreach (var s in a)
+            {
+
+                x += s.HenkiloID.ToString();
+
+            }
+            ViewBag.Message = x;
+
+
+
+
+            return View();
+        }
+
+        public ActionResult Login()
             {
                 ViewBag.Message = "Titityyy.";
 
