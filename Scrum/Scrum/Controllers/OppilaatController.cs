@@ -12,7 +12,7 @@ namespace Scrum.Controllers
         // GET: Oppilaat
         public ActionResult Index()
         {
-            ScrumEntities1 db = new ScrumEntities1();
+            _ = new ScrumEntities1();
             return View();
         }
     }
