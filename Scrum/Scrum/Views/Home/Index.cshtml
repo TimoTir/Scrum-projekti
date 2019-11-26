@@ -8,9 +8,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
 
-            body h1, h2, h3, h4, h5, b, p, footer, title, a, text {
-                font-family: Poppins; /*Arial, Helvetica, sans-serif;*/
+            html, body, h1, h2, h3, h4, h5, b,title,text,label {
+                font-family: Poppins;
+                font-size:20px;
+                color:white;
+            
             }
+
             .container {
               padding: 6px;
             }
@@ -29,19 +33,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        @Html.ActionLink("Osallistumis päiväkirja", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @*@Html.ActionLink("Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                            <li>@Html.ActionLink("Koulujutut", "Koulujutut", "Home")</li>
+                            <li>@Html.ActionLink("Careeria", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Kirjaudu sisään", "Login", "Home")</li>
+                            
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <h1>Osallistumis päiväkirja</h1>
+            <h1>Osallistumispäiväkirja</h1>
             @ViewBag.Secret
 
 

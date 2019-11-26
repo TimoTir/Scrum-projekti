@@ -47,10 +47,6 @@ namespace Scrum.Controllers
                 return View();
             }
 
-            public ActionResult Koulujutut()
-            {
 
-                return View();
-            }
         }
     }

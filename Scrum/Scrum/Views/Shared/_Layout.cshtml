@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        html, body, h1, h2, h3, h4, h5 {
+        html, body, h1, h2, h3, h4, h5, b,title,text,label {
             font-family: Poppins;
+            font-size:20px;
+            color:white;
+            
         }
 
         .container {
@@ -33,13 +36,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Osallistumis päiväkirja", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                    <li>@Html.ActionLink("Koulujutut", "Koulujutut", "Home")</li>
+                    <li>@Html.ActionLink("Careeria", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Kirjaudu sisään", "Login", "Home")</li>
                     <li>@Html.ActionLink("Hae", "Hae", "Home")</li>
                 </ul>
             </div>
