@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScrumModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kurssit">
+    <Key>
+      <PropertyRef Name="KurssiId" />
+    </Key>
+    <Property Name="Kurssi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Laajuus" Type="int" />
+    <Property Name="KurssiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KurssiToteutukset">
+    <Key>
+      <PropertyRef Name="Kurssi" />
+    </Key>
+    <Property Name="Kurssi" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Paivamaara" Type="date" />
+    <Property Name="Opettaja" Type="int" />
+    <Property Name="Luokka" Type="int" />
+    <Property Name="KurssiId" Type="int" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PassWord" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AccessLevel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Luokkatilat">
+    <Key>
+      <PropertyRef Name="LuokkaID" />
+    </Key>
+    <Property Name="Luokka" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LuokkaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Opettajat">
+    <Key>
+      <PropertyRef Name="HenkiloID" />
+    </Key>
+    <Property Name="HenkiloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Etunimi" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Sukunimi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Puhelin" Type="varchar" MaxLength="20" />
+    <Property Name="Sahkoposti" Type="varchar" MaxLength="50" />
+    <Property Name="LoginId" Type="int" />
+  </EntityType>
+  <EntityType Name="Opiskelijat">
+    <Key>
+      <PropertyRef Name="Opiskelijanumero" />
+    </Key>
+    <Property Name="Opiskelijanumero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Etunimi" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Sukunimi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Puhelin" Type="varchar" MaxLength="20" />
+    <Property Name="Sahkoposti" Type="varchar" MaxLength="50" />
+    <Property Name="LoginId" Type="int" />
+  </EntityType>
+  <EntityType Name="Osallistumiset">
+    <Key>
+      <PropertyRef Name="Osallistuminen" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Oppilas" Type="int" Nullable="false" />
+    <Property Name="Osallistuminen" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Arvosana" Type="int" />
+  </EntityType>
+  <EntityType Name="PaaKayttajat">
+    <Key>
+      <PropertyRef Name="HenkiloID" />
+    </Key>
+    <Property Name="HenkiloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Etunimi" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Sukunimi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Puhelin" Type="varchar" MaxLength="20" />
+    <Property Name="Sahkoposti" Type="varchar" MaxLength="50" />
+    <Property Name="LoginId" Type="int" />
+  </EntityType>
+  <Association Name="FK__KurssiTot__Kurss__440B1D61">
+    <End Role="Kurssit" Type="Self.Kurssit" Multiplicity="0..1" />
+    <End Role="KurssiToteutukset" Type="Self.KurssiToteutukset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kurssit">
+        <PropertyRef Name="KurssiId" />
+      </Principal>
+      <Dependent Role="KurssiToteutukset">
+        <PropertyRef Name="KurssiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KurssiTot__Luokk__4222D4EF">
+    <End Role="Luokkatilat" Type="Self.Luokkatilat" Multiplicity="0..1" />
+    <End Role="KurssiToteutukset" Type="Self.KurssiToteutukset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Luokkatilat">
+        <PropertyRef Name="LuokkaID" />
+      </Principal>
+      <Dependent Role="KurssiToteutukset">
+        <PropertyRef Name="Luokka" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Opettajat__Login__619B8048">
+    <End Role="Logins" Type="Self.Logins" Multiplicity="0..1" />
+    <End Role="Opettajat" Type="Self.Opettajat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logins">
+        <PropertyRef Name="LoginId" />
+      </Principal>
+      <Dependent Role="Opettajat">
+        <PropertyRef Name="LoginId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Opiskelij__Login__3D5E1FD2">
+    <End Role="Logins" Type="Self.Logins" Multiplicity="0..1" />
+    <End Role="Opiskelijat" Type="Self.Opiskelijat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logins">
+        <PropertyRef Name="LoginId" />
+      </Principal>
+      <Dependent Role="Opiskelijat">
+        <PropertyRef Name="LoginId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Osallistu__Oppil__4316F928">
+    <End Role="Opiskelijat" Type="Self.Opiskelijat" Multiplicity="1" />
+    <End Role="Osallistumiset" Type="Self.Osallistumiset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opiskelijat">
+        <PropertyRef Name="Opiskelijanumero" />
+      </Principal>
+      <Dependent Role="Osallistumiset">
+        <PropertyRef Name="Oppilas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PaaKaytta__Login__628FA481">
+    <End Role="Logins" Type="Self.Logins" Multiplicity="0..1" />
+    <End Role="PaaKayttajat" Type="Self.PaaKayttajat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logins">
+        <PropertyRef Name="LoginId" />
+      </Principal>
+      <Dependent Role="PaaKayttajat">
+        <PropertyRef Name="LoginId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID">
+    <End Role="Kurssit" Type="Self.Kurssit" Multiplicity="1" />
+    <End Role="Osallistumiset" Type="Self.Osallistumiset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kurssit">
+        <PropertyRef Name="KurssiId" />
+      </Principal>
+      <Dependent Role="Osallistumiset">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ScrumModelStoreContainer">
+    <EntitySet Name="Kurssit" EntityType="Self.Kurssit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KurssiToteutukset" EntityType="Self.KurssiToteutukset" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Luokkatilat" EntityType="Self.Luokkatilat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Opettajat" EntityType="Self.Opettajat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Opiskelijat" EntityType="Self.Opiskelijat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Osallistumiset" EntityType="Self.Osallistumiset" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaaKayttajat" EntityType="Self.PaaKayttajat" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__KurssiTot__Kurss__440B1D61" Association="Self.FK__KurssiTot__Kurss__440B1D61">
+      <End Role="Kurssit" EntitySet="Kurssit" />
+      <End Role="KurssiToteutukset" EntitySet="KurssiToteutukset" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KurssiTot__Luokk__4222D4EF" Association="Self.FK__KurssiTot__Luokk__4222D4EF">
+      <End Role="Luokkatilat" EntitySet="Luokkatilat" />
+      <End Role="KurssiToteutukset" EntitySet="KurssiToteutukset" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Opettajat__Login__619B8048" Association="Self.FK__Opettajat__Login__619B8048">
+      <End Role="Logins" EntitySet="Logins" />
+      <End Role="Opettajat" EntitySet="Opettajat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Opiskelij__Login__3D5E1FD2" Association="Self.FK__Opiskelij__Login__3D5E1FD2">
+      <End Role="Logins" EntitySet="Logins" />
+      <End Role="Opiskelijat" EntitySet="Opiskelijat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Osallistu__Oppil__4316F928" Association="Self.FK__Osallistu__Oppil__4316F928">
+      <End Role="Opiskelijat" EntitySet="Opiskelijat" />
+      <End Role="Osallistumiset" EntitySet="Osallistumiset" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PaaKaytta__Login__628FA481" Association="Self.FK__PaaKaytta__Login__628FA481">
+      <End Role="Logins" EntitySet="Logins" />
+      <End Role="PaaKayttajat" EntitySet="PaaKayttajat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID" Association="Self.FK_ID">
+      <End Role="Kurssit" EntitySet="Kurssit" />
+      <End Role="Osallistumiset" EntitySet="Osallistumiset" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

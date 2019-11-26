@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ScrumModelStoreContainer" CdmEntityContainer="ScrumEntities1">
+    <EntitySetMapping Name="Kurssit">
+      <EntityTypeMapping TypeName="ScrumModel.Kurssit">
+        <MappingFragment StoreEntitySet="Kurssit">
+          <ScalarProperty Name="Kurssi" ColumnName="Kurssi" />
+          <ScalarProperty Name="Laajuus" ColumnName="Laajuus" />
+          <ScalarProperty Name="KurssiId" ColumnName="KurssiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KurssiToteutukset">
+      <EntityTypeMapping TypeName="ScrumModel.KurssiToteutukset">
+        <MappingFragment StoreEntitySet="KurssiToteutukset">
+          <ScalarProperty Name="Kurssi" ColumnName="Kurssi" />
+          <ScalarProperty Name="Paivamaara" ColumnName="Paivamaara" />
+          <ScalarProperty Name="Opettaja" ColumnName="Opettaja" />
+          <ScalarProperty Name="Luokka" ColumnName="Luokka" />
+          <ScalarProperty Name="KurssiId" ColumnName="KurssiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="ScrumModel.Logins">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Luokkatilat">
+      <EntityTypeMapping TypeName="ScrumModel.Luokkatilat">
+        <MappingFragment StoreEntitySet="Luokkatilat">
+          <ScalarProperty Name="Luokka" ColumnName="Luokka" />
+          <ScalarProperty Name="LuokkaID" ColumnName="LuokkaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opettajat">
+      <EntityTypeMapping TypeName="ScrumModel.Opettajat">
+        <MappingFragment StoreEntitySet="Opettajat">
+          <ScalarProperty Name="HenkiloID" ColumnName="HenkiloID" />
+          <ScalarProperty Name="Etunimi" ColumnName="Etunimi" />
+          <ScalarProperty Name="Sukunimi" ColumnName="Sukunimi" />
+          <ScalarProperty Name="Puhelin" ColumnName="Puhelin" />
+          <ScalarProperty Name="Sahkoposti" ColumnName="Sahkoposti" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opiskelijat">
+      <EntityTypeMapping TypeName="ScrumModel.Opiskelijat">
+        <MappingFragment StoreEntitySet="Opiskelijat">
+          <ScalarProperty Name="Opiskelijanumero" ColumnName="Opiskelijanumero" />
+          <ScalarProperty Name="Etunimi" ColumnName="Etunimi" />
+          <ScalarProperty Name="Sukunimi" ColumnName="Sukunimi" />
+          <ScalarProperty Name="Puhelin" ColumnName="Puhelin" />
+          <ScalarProperty Name="Sahkoposti" ColumnName="Sahkoposti" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Osallistumiset">
+      <EntityTypeMapping TypeName="ScrumModel.Osallistumiset">
+        <MappingFragment StoreEntitySet="Osallistumiset">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Oppilas" ColumnName="Oppilas" />
+          <ScalarProperty Name="Osallistuminen" ColumnName="Osallistuminen" />
+          <ScalarProperty Name="Arvosana" ColumnName="Arvosana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaaKayttajat">
+      <EntityTypeMapping TypeName="ScrumModel.PaaKayttajat">
+        <MappingFragment StoreEntitySet="PaaKayttajat">
+          <ScalarProperty Name="HenkiloID" ColumnName="HenkiloID" />
+          <ScalarProperty Name="Etunimi" ColumnName="Etunimi" />
+          <ScalarProperty Name="Sukunimi" ColumnName="Sukunimi" />
+          <ScalarProperty Name="Puhelin" ColumnName="Puhelin" />
+          <ScalarProperty Name="Sahkoposti" ColumnName="Sahkoposti" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
