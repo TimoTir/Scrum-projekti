@@ -247,7 +247,8 @@ ServiceFabricBackup/
 *.ldf
 *.ndf
 
-# Web.Config (Connection String/sensitive data)Web.config
+# Web.Config (Connection String/sensitive data)
+Web.config
 
 # Business Intelligence projects
 *.rdl.data
